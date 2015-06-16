@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>PCF Autoscaling demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.2.0/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.1/jquery.min.js}"></script>
+</head>
+<body>
+<!-- Header -->
+<div >
+    <!-- ============================================================================ -->
+    <!-- This content is only used for static prototyping purposes (natural templates)-->
+    <!-- and is therefore entirely optional, as this markup fragment will be included -->
+    <!-- from "fragments/header.html" at runtime.                                     -->
+    <!-- ============================================================================ -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">PivDemo</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="hero-unit" style="padding-top:50px;">
+        <h1>PCF AutoScaling Demo</h1>
+        <p>
+            <h1>App  Info</h1>
+        </p>
+        <p>
+        	<table class="table table-striped table-hover">
+		    	<tr><td><strong>App Name</strong></td><td th:text="${applicationName}">42</td></tr>
+		    	<tr class="info"><td><strong>Instance</strong></td><td th:text="${instance}">42</td></tr>
+		    	<tr><td><strong>Disk Allocated</strong></td><td th:text="${disk}">42</td></tr>
+		    	<tr><td><strong>Instance IP</strong></td><td th:text="${ipAddress}">42</td></tr>
+		    	<tr><td><strong>Instance Port</strong></td><td th:text="${port}">42</td></tr>
+		    	<tr class="info"><td><strong>Requests Serviced</strong></td><td th:text="${requestsServed}">42</td></tr>
+		    	<tr class="info"><td><strong>Limits</strong></td><td th:text="${limits}">42</td></tr>
+		    </table>    
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
